@@ -128,6 +128,7 @@ header('Content-type: text/html');
     		$r1->close();
     $idok=$idok+1;
     if(!isset($_POST['Nombre'])){echo "vacia";}else{
+	  
     $query = "INSERT INTO mantenimiento VALUES ('";
     $query.= $idok;                                     // ojo, este es el nuevo !!!! 
     $query.="','";
@@ -141,7 +142,11 @@ header('Content-type: text/html');
     $query.="','no','";
     $query.= utf8_encode($_POST['Descripcion']);
     $query.="');";
-        
+        if(isset($pablo['Id'].'</p>'{
+		 echo'</p>Incidencia:'.$pablo['Id].'</p>;
+		 } else {
+			 echo '</p>ERROR!!!, No existe esa incidencia o a llegado al final ed la tabla </p>
+			 };
         
        // aquí va a hacer la misma sentencia INSERT que existía cuyo resultado se coloca en el objeto-consulta $result.
       $result=$conn->query($query);                                               //runs the posted query
